@@ -15,6 +15,7 @@
 
 #include "absl/log/absl_check.h"
 #include "absl/memory/memory.h"
+#include "absl/strings/str_cat.h"
 #include "absl/strings/string_view.h"
 #include "absl/strings/substitute.h"
 #include "google/protobuf/compiler/cpp/field.h"
@@ -593,10 +594,24 @@ void OneofMessage::GenerateInlineAccessorDefinitions(io::Printer* p) const {
 }
 
 void OneofMessage::GenerateClearingCode(io::Printer* p) const {
-  p->Emit(R"cc(
-    if (GetArena() == nullptr) {
-      delete $field_$;
-    })cc");
+  // Lite protobufs don't need this debug hardening.
+  if (HasDescriptorMethods(field_->file(), options_)) {
+    p->Emit(R"cc(
+      if (GetArena() == nullptr) {
+        delete $field_$;
+#ifdef PROTOBUF_FORCE_CLEAR_ONEOF_ARENA_MESSAGE
+      } else if ($field_$ != nullptr) {
+        $field_$->Clear();
+#endif
+      }
+    )cc");
+  } else {
+    p->Emit(R"cc(
+      if (GetArena() == nullptr) {
+        delete $field_$;
+      }
+    )cc");
+  }
 }
 
 void OneofMessage::GenerateMessageClearingCode(io::Printer* p) const {
