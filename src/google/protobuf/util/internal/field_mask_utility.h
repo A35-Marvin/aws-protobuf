@@ -41,7 +41,7 @@
 #include <google/protobuf/stubs/strutil.h>
 #include <google/protobuf/stubs/status.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace util {
 namespace converter {

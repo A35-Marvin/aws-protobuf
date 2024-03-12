@@ -41,7 +41,7 @@
 #include <google/protobuf/compiler/csharp/csharp_options.h>
 #include <google/protobuf/compiler/csharp/csharp_enum_field.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 namespace csharp {

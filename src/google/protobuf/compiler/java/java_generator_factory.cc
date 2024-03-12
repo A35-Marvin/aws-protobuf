@@ -42,7 +42,7 @@
 #include <google/protobuf/compiler/java/java_message_lite.h>
 #include <google/protobuf/compiler/java/java_service.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 namespace java {

@@ -57,13 +57,13 @@
 
 #include <google/protobuf/port_def.inc>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 class UnknownFieldSet;  // unknown_field_set.h
 }  // namespace protobuf
 }  // namespace google
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace internal {
 

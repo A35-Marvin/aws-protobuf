@@ -32,7 +32,7 @@
 
 #include <google/protobuf/util/internal/datapiece.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace util {
 namespace converter {

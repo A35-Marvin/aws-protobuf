@@ -49,7 +49,7 @@
 
 #include <google/protobuf/port_def.inc>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace util {
 namespace converter {
@@ -62,7 +62,7 @@ using util::error::INVALID_ARGUMENT;
 
 
 ProtoStreamObjectWriter::ProtoStreamObjectWriter(
-    TypeResolver* type_resolver, const google::protobuf::Type& type,
+    TypeResolver* type_resolver, const google_aws::protobuf::Type& type,
     strings::ByteSink* output, ErrorListener* listener,
     const ProtoStreamObjectWriter::Options& options)
     : ProtoWriter(type_resolver, type, output, listener),
@@ -76,7 +76,7 @@ ProtoStreamObjectWriter::ProtoStreamObjectWriter(
 }
 
 ProtoStreamObjectWriter::ProtoStreamObjectWriter(
-    const TypeInfo* typeinfo, const google::protobuf::Type& type,
+    const TypeInfo* typeinfo, const google_aws::protobuf::Type& type,
     strings::ByteSink* output, ErrorListener* listener,
     const ProtoStreamObjectWriter::Options& options)
     : ProtoWriter(typeinfo, type, output, listener),
@@ -89,7 +89,7 @@ ProtoStreamObjectWriter::ProtoStreamObjectWriter(
 }
 
 ProtoStreamObjectWriter::ProtoStreamObjectWriter(
-    const TypeInfo* typeinfo, const google::protobuf::Type& type,
+    const TypeInfo* typeinfo, const google_aws::protobuf::Type& type,
     strings::ByteSink* output, ErrorListener* listener)
     : ProtoWriter(typeinfo, type, output, listener),
       master_type_(type),
@@ -337,7 +337,7 @@ void ProtoStreamObjectWriter::AnyWriter::StartAny(const DataPiece& value) {
     type_url_ = s.value();
   }
   // Resolve the type url, and report an error if we failed to resolve it.
-  StatusOr<const google::protobuf::Type*> resolved_type =
+  StatusOr<const google_aws::protobuf::Type*> resolved_type =
       parent_->typeinfo()->ResolveTypeUrl(type_url_);
   if (!resolved_type.ok()) {
     parent_->InvalidValue("Any", resolved_type.status().message());
@@ -345,7 +345,7 @@ void ProtoStreamObjectWriter::AnyWriter::StartAny(const DataPiece& value) {
     return;
   }
   // At this point, type is never null.
-  const google::protobuf::Type* type = resolved_type.value();
+  const google_aws::protobuf::Type* type = resolved_type.value();
 
   well_known_type_render_ = FindTypeRenderer(type_url_);
   if (well_known_type_render_ != nullptr ||
@@ -583,7 +583,7 @@ ProtoStreamObjectWriter* ProtoStreamObjectWriter::StartObject(
     return this;
   }
 
-  const google::protobuf::Field* field = BeginNamed(name, false);
+  const google_aws::protobuf::Field* field = BeginNamed(name, false);
 
   if (field == nullptr) return this;
 
@@ -798,7 +798,7 @@ ProtoStreamObjectWriter* ProtoStreamObjectWriter::StartList(
   }
 
   // name is not empty
-  const google::protobuf::Field* field = Lookup(name);
+  const google_aws::protobuf::Field* field = Lookup(name);
 
   if (field == nullptr) {
     IncrementInvalidDepth();
@@ -1006,7 +1006,7 @@ Status ProtoStreamObjectWriter::RenderTimestamp(ProtoStreamObjectWriter* ow,
 
   int64 seconds;
   int32 nanos;
-  if (!::google::protobuf::internal::ParseTime(value.ToString(), &seconds,
+  if (!::google_aws::protobuf::internal::ParseTime(value.ToString(), &seconds,
                                                &nanos)) {
     return Status(INVALID_ARGUMENT, StrCat("Invalid time format: ", value));
   }
@@ -1129,7 +1129,7 @@ ProtoStreamObjectWriter* ProtoStreamObjectWriter::RenderDataPiece(
     return this;
   }
 
-  const google::protobuf::Field* field = nullptr;
+  const google_aws::protobuf::Field* field = nullptr;
   if (current_->IsMap()) {
     if (!ValidMapKey(name)) return this;
 
@@ -1269,7 +1269,7 @@ void ProtoStreamObjectWriter::InitRendererMap() {
       &ProtoStreamObjectWriter::RenderWrapperType;
   (*renderers_)["type.googleapis.com/google.protobuf.Value"] =
       &ProtoStreamObjectWriter::RenderStructValue;
-  ::google::protobuf::internal::OnShutdown(&DeleteRendererMap);
+  ::google_aws::protobuf::internal::OnShutdown(&DeleteRendererMap);
 }
 
 void ProtoStreamObjectWriter::DeleteRendererMap() {
@@ -1325,33 +1325,33 @@ void ProtoStreamObjectWriter::PopOneElement() {
   current_.reset(current_->pop<Item>());
 }
 
-bool ProtoStreamObjectWriter::IsMap(const google::protobuf::Field& field) {
+bool ProtoStreamObjectWriter::IsMap(const google_aws::protobuf::Field& field) {
   if (field.type_url().empty() ||
-      field.kind() != google::protobuf::Field::TYPE_MESSAGE ||
-      field.cardinality() != google::protobuf::Field::CARDINALITY_REPEATED) {
+      field.kind() != google_aws::protobuf::Field::TYPE_MESSAGE ||
+      field.cardinality() != google_aws::protobuf::Field::CARDINALITY_REPEATED) {
     return false;
   }
-  const google::protobuf::Type* field_type =
+  const google_aws::protobuf::Type* field_type =
       typeinfo()->GetTypeByTypeUrl(field.type_url());
 
   return converter::IsMap(field, *field_type);
 }
 
-bool ProtoStreamObjectWriter::IsAny(const google::protobuf::Field& field) {
+bool ProtoStreamObjectWriter::IsAny(const google_aws::protobuf::Field& field) {
   return GetTypeWithoutUrl(field.type_url()) == kAnyType;
 }
 
-bool ProtoStreamObjectWriter::IsStruct(const google::protobuf::Field& field) {
+bool ProtoStreamObjectWriter::IsStruct(const google_aws::protobuf::Field& field) {
   return GetTypeWithoutUrl(field.type_url()) == kStructType;
 }
 
 bool ProtoStreamObjectWriter::IsStructValue(
-    const google::protobuf::Field& field) {
+    const google_aws::protobuf::Field& field) {
   return GetTypeWithoutUrl(field.type_url()) == kStructValueType;
 }
 
 bool ProtoStreamObjectWriter::IsStructListValue(
-    const google::protobuf::Field& field) {
+    const google_aws::protobuf::Field& field) {
   return GetTypeWithoutUrl(field.type_url()) == kStructListValueType;
 }
 

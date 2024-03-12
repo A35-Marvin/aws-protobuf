@@ -86,7 +86,7 @@
 
 #include <google/protobuf/port_def.inc>  // NOLINT
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 
 using internal::DynamicMapField;

@@ -76,7 +76,7 @@
 #endif
 
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 
 // Defined in this file.

@@ -47,7 +47,7 @@
 #include <google/protobuf/stubs/substitute.h>
 #include <google/protobuf/stubs/hash.h>  // for hash<T *>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 namespace java {

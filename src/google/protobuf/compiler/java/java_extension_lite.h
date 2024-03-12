@@ -37,7 +37,7 @@
 #include <google/protobuf/stubs/common.h>
 #include <google/protobuf/compiler/java/java_extension.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 namespace java {

@@ -34,7 +34,7 @@
 #include <google/protobuf/util/delimited_message_util.h>
 #include <google/protobuf/io/coded_stream.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace util {
 

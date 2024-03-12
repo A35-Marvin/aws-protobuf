@@ -51,13 +51,13 @@
 
 #include <google/protobuf/port_def.inc>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 class EnumDescriptor;
 }  // namespace protobuf
 }  // namespace google
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 
 // Returns the EnumDescriptor for enum type E, which must be a

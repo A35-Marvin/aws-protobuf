@@ -37,7 +37,7 @@
 #include <google/protobuf/stubs/status.h>
 #include <google/protobuf/stubs/statusor.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace util {
 

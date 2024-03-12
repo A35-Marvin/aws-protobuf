@@ -58,7 +58,7 @@
 #error "You cannot SWIG proto headers"
 #endif
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 
 template <typename T>

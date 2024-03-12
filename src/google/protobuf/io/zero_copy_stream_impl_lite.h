@@ -57,7 +57,7 @@
 
 #include <google/protobuf/port_def.inc>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace io {
 

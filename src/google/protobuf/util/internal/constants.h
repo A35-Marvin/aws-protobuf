@@ -35,7 +35,7 @@
 
 // This file contains constants used by //net/proto2/util/converter.
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace util {
 namespace converter {

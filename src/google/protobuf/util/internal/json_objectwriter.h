@@ -42,7 +42,7 @@
 #include <google/protobuf/port_def.inc>
 // clang-format on
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace util {
 namespace converter {

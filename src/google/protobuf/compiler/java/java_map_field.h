@@ -33,7 +33,7 @@
 
 #include <google/protobuf/compiler/java/java_field.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 namespace java {

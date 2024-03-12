@@ -35,7 +35,7 @@
 #include <google/protobuf/reflection.h>
 #include <google/protobuf/repeated_field.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace internal {
 // A base class for RepeatedFieldAccessor implementations that can support

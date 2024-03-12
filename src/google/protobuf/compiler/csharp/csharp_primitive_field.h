@@ -36,7 +36,7 @@
 #include <google/protobuf/compiler/code_generator.h>
 #include <google/protobuf/compiler/csharp/csharp_field_base.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 namespace csharp {

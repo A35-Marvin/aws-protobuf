@@ -38,7 +38,7 @@
 // Must be included last.
 #include <google/protobuf/port_def.inc>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace util {
 namespace converter {

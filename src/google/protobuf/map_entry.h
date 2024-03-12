@@ -45,7 +45,7 @@
 #error "You cannot SWIG proto headers"
 #endif
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 class Arena;
 namespace internal {
@@ -57,7 +57,7 @@ class MapField;
 }  // namespace protobuf
 }  // namespace google
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace internal {
 

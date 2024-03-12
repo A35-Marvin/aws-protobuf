@@ -59,7 +59,7 @@
 
 const size_t kMapEntryTagByteSize = 2;
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace internal {
 

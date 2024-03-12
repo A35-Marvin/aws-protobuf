@@ -53,7 +53,7 @@
 #include <google/protobuf/stubs/map_util.h>
 #include <google/protobuf/stubs/hash.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 

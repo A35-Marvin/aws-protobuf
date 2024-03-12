@@ -40,7 +40,7 @@
 #include <string>
 #include <google/protobuf/compiler/java/java_field.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 namespace java {
@@ -51,7 +51,7 @@ class ClassNameResolver;  // name_resolver.h
 }  // namespace protobuf
 }  // namespace google
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 namespace java {

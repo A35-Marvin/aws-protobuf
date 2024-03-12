@@ -40,12 +40,12 @@
 // Must go after other includes.
 #include <google/protobuf/port_def.inc>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace util {
 
-using google::protobuf::Duration;
-using google::protobuf::Timestamp;
+using google_aws::protobuf::Duration;
+using google_aws::protobuf::Timestamp;
 
 namespace {
 static const int kNanosPerSecond = 1000000000;
@@ -115,15 +115,15 @@ std::string FormatNanos(int32 nanos) {
 }
 
 std::string FormatTime(int64 seconds, int32 nanos) {
-  return ::google::protobuf::internal::FormatTime(seconds, nanos);
+  return ::google_aws::protobuf::internal::FormatTime(seconds, nanos);
 }
 
 bool ParseTime(const std::string& value, int64* seconds, int32* nanos) {
-  return ::google::protobuf::internal::ParseTime(value, seconds, nanos);
+  return ::google_aws::protobuf::internal::ParseTime(value, seconds, nanos);
 }
 
 void CurrentTime(int64* seconds, int32* nanos) {
-  return ::google::protobuf::internal::GetCurrentTime(seconds, nanos);
+  return ::google_aws::protobuf::internal::GetCurrentTime(seconds, nanos);
 }
 
 // Truncates the remainder part after division.
@@ -372,7 +372,7 @@ timeval TimeUtil::DurationToTimeval(const Duration& value) {
 }  // namespace protobuf
 }  // namespace google
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace {
 using ::PROTOBUF_NAMESPACE_ID::util::CreateNormalized;

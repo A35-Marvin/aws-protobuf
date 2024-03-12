@@ -35,7 +35,7 @@
 
 #include <google/protobuf/stubs/common.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 class FieldDescriptor;    // descriptor.h
 class Descriptor;         // descriptor.h
@@ -51,7 +51,7 @@ class Context;             // context.h
 }  // namespace protobuf
 }  // namespace google
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 namespace java {

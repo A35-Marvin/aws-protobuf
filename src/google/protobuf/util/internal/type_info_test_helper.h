@@ -42,7 +42,7 @@
 #include <google/protobuf/util/internal/protostream_objectwriter.h>
 #include <google/protobuf/util/type_resolver.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace util {
 namespace converter {

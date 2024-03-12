@@ -49,7 +49,7 @@
 
 #include <google/protobuf/stubs/strutil.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 namespace java {

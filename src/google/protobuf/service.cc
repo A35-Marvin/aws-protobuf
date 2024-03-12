@@ -34,7 +34,7 @@
 
 #include <google/protobuf/service.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 
 Service::~Service() {}

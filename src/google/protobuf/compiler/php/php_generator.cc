@@ -73,7 +73,7 @@ const int kFieldSetter = 1;
 const int kFieldGetter = 2;
 const int kFieldProperty = 3;
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 namespace php {

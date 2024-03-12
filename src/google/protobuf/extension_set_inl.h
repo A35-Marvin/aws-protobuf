@@ -35,7 +35,7 @@
 #include <google/protobuf/extension_set.h>
 #include <google/protobuf/metadata_lite.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace internal {
 

@@ -98,7 +98,7 @@
 #include <google/protobuf/io/zero_copy_stream.h>
 #include <google/protobuf/stubs/stl_util.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace io {
 namespace {

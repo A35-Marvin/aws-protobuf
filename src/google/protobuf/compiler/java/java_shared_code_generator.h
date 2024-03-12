@@ -42,7 +42,7 @@
 #include <google/protobuf/stubs/common.h>
 #include <google/protobuf/compiler/java/java_options.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 class FileDescriptor;  // descriptor.h
 namespace compiler {
@@ -57,7 +57,7 @@ class Printer;  // printer.h
 }  // namespace protobuf
 }  // namespace google
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 namespace java {

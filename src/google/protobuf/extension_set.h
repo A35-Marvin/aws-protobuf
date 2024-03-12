@@ -59,7 +59,7 @@
 #error "You cannot SWIG proto headers"
 #endif
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 class Arena;
 class Descriptor;       // descriptor.h
@@ -75,7 +75,7 @@ class FieldSkipper;  // wire_format_lite.h
 }  // namespace protobuf
 }  // namespace google
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace internal {
 
@@ -1575,7 +1575,7 @@ class ExtensionIdentifier {
 template <typename ExtendeeType, typename TypeTraitsType,
           internal::FieldType field_type, bool is_packed>
 void LinkExtensionReflection(
-    const google::protobuf::internal::ExtensionIdentifier<
+    const google_aws::protobuf::internal::ExtensionIdentifier<
         ExtendeeType, TypeTraitsType, field_type, is_packed>& extension) {
   internal::StrongReference(extension);
 }

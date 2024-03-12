@@ -39,7 +39,7 @@
 #include <vector>
 #include <google/protobuf/descriptor.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 namespace java {
@@ -53,7 +53,7 @@ class Printer;  // printer.h
 }  // namespace protobuf
 }  // namespace google
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 namespace java {

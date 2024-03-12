@@ -41,7 +41,7 @@
 #include <google/protobuf/compiler/csharp/csharp_names.h>
 #include <google/protobuf/compiler/csharp/csharp_options.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 namespace csharp {

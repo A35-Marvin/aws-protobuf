@@ -43,25 +43,25 @@
 #include <google/protobuf/port_def.inc>
 // clang-format on
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace util {
 namespace {
-using google::protobuf::Any;
-using google::protobuf::BoolValue;
-using google::protobuf::BytesValue;
-using google::protobuf::DoubleValue;
-using google::protobuf::Enum;
-using google::protobuf::EnumValue;
-using google::protobuf::Field;
-using google::protobuf::FloatValue;
-using google::protobuf::Int32Value;
-using google::protobuf::Int64Value;
-using google::protobuf::Option;
-using google::protobuf::StringValue;
-using google::protobuf::Type;
-using google::protobuf::UInt32Value;
-using google::protobuf::UInt64Value;
+using google_aws::protobuf::Any;
+using google_aws::protobuf::BoolValue;
+using google_aws::protobuf::BytesValue;
+using google_aws::protobuf::DoubleValue;
+using google_aws::protobuf::Enum;
+using google_aws::protobuf::EnumValue;
+using google_aws::protobuf::Field;
+using google_aws::protobuf::FloatValue;
+using google_aws::protobuf::Int32Value;
+using google_aws::protobuf::Int64Value;
+using google_aws::protobuf::Option;
+using google_aws::protobuf::StringValue;
+using google_aws::protobuf::Type;
+using google_aws::protobuf::UInt32Value;
+using google_aws::protobuf::UInt64Value;
 
 using util::Status;
 using util::error::INVALID_ARGUMENT;

@@ -43,7 +43,7 @@
 #include <google/protobuf/compiler/cpp/cpp_message_layout_helper.h>
 #include <google/protobuf/compiler/cpp/cpp_options.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace io {
 class Printer;  // printer.h
@@ -51,7 +51,7 @@ class Printer;  // printer.h
 }  // namespace protobuf
 }  // namespace google
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 namespace cpp {

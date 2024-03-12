@@ -57,7 +57,7 @@
 #error "You cannot SWIG proto headers"
 #endif
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 class DescriptorPool;
 class MapKey;
@@ -68,7 +68,7 @@ struct Metadata;
 }  // namespace protobuf
 }  // namespace google
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace internal {
 class DefaultEmptyOneof;

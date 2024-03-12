@@ -35,7 +35,7 @@
 
 #include <google/protobuf/stubs/common.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 
 // Inside Google, this function implements a horrible, disgusting hack in which

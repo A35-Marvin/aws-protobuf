@@ -36,7 +36,7 @@
 
 #include <google/protobuf/stubs/common.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 class Descriptor;
 class EnumDescriptor;

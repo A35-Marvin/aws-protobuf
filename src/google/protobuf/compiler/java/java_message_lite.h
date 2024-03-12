@@ -40,7 +40,7 @@
 #include <google/protobuf/compiler/java/java_field.h>
 #include <google/protobuf/compiler/java/java_message.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 namespace java {

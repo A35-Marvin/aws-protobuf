@@ -45,7 +45,7 @@
 #include <google/protobuf/wire_format_lite.h>
 #include <google/protobuf/descriptor.pb.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 namespace objectivec {

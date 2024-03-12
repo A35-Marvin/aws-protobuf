@@ -133,7 +133,7 @@
 #error "You cannot SWIG proto headers"
 #endif
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 
 // Defined in this file.
@@ -1180,7 +1180,7 @@ class PROTOBUF_EXPORT MessageFactory {
   // built lazily, so we can't register types by their descriptor until we
   // know that the descriptor exists.  |filename| must be a permanent string.
   static void InternalRegisterGeneratedFile(
-      const google::protobuf::internal::DescriptorTable* table);
+      const google_aws::protobuf::internal::DescriptorTable* table);
 
   // For internal use only:  Registers a message type.  Called only by the
   // functions which are registered with InternalRegisterGeneratedFile(),

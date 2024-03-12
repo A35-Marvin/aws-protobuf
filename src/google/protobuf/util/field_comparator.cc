@@ -41,7 +41,7 @@
 #include <google/protobuf/stubs/map_util.h>
 #include <google/protobuf/stubs/mathutil.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace util {
 

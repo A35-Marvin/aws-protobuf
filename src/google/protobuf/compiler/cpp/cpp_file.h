@@ -46,7 +46,7 @@
 #include <google/protobuf/compiler/cpp/cpp_options.h>
 #include <google/protobuf/compiler/scc.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 class FileDescriptor;  // descriptor.h
 namespace io {
@@ -55,7 +55,7 @@ class Printer;  // printer.h
 }  // namespace protobuf
 }  // namespace google
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 namespace cpp {

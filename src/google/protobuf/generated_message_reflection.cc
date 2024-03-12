@@ -57,23 +57,23 @@
 
 #define GOOGLE_PROTOBUF_HAS_ONEOF
 
-using google::protobuf::internal::ArenaStringPtr;
-using google::protobuf::internal::DescriptorTable;
-using google::protobuf::internal::ExtensionSet;
-using google::protobuf::internal::GenericTypeHandler;
-using google::protobuf::internal::GetEmptyString;
-using google::protobuf::internal::InlinedStringField;
-using google::protobuf::internal::InternalMetadata;
-using google::protobuf::internal::LazyField;
-using google::protobuf::internal::MapFieldBase;
-using google::protobuf::internal::MigrationSchema;
-using google::protobuf::internal::OnShutdownDelete;
-using google::protobuf::internal::ReflectionSchema;
-using google::protobuf::internal::RepeatedPtrFieldBase;
-using google::protobuf::internal::StringSpaceUsedExcludingSelfLong;
-using google::protobuf::internal::WrappedMutex;
+using google_aws::protobuf::internal::ArenaStringPtr;
+using google_aws::protobuf::internal::DescriptorTable;
+using google_aws::protobuf::internal::ExtensionSet;
+using google_aws::protobuf::internal::GenericTypeHandler;
+using google_aws::protobuf::internal::GetEmptyString;
+using google_aws::protobuf::internal::InlinedStringField;
+using google_aws::protobuf::internal::InternalMetadata;
+using google_aws::protobuf::internal::LazyField;
+using google_aws::protobuf::internal::MapFieldBase;
+using google_aws::protobuf::internal::MigrationSchema;
+using google_aws::protobuf::internal::OnShutdownDelete;
+using google_aws::protobuf::internal::ReflectionSchema;
+using google_aws::protobuf::internal::RepeatedPtrFieldBase;
+using google_aws::protobuf::internal::StringSpaceUsedExcludingSelfLong;
+using google_aws::protobuf::internal::WrappedMutex;
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 
 namespace {

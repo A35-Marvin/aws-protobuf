@@ -32,7 +32,7 @@
 
 #include <google/protobuf/stubs/logging.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace util {
 namespace internal {

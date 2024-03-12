@@ -47,7 +47,7 @@
 // Must be included last.
 #include <google/protobuf/port_def.inc>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace util {
 namespace converter {
@@ -59,41 +59,41 @@ static const int64 kTypeUrlSize = 19;
 // returns it.
 // When the option with the given name is not found, default_value is returned.
 PROTOBUF_EXPORT bool GetBoolOptionOrDefault(
-    const RepeatedPtrField<google::protobuf::Option>& options,
+    const RepeatedPtrField<google_aws::protobuf::Option>& options,
     StringPiece option_name, bool default_value);
 
 // Returns int64 option value. If the option isn't found, returns the
 // default_value.
 PROTOBUF_EXPORT int64 GetInt64OptionOrDefault(
-    const RepeatedPtrField<google::protobuf::Option>& options,
+    const RepeatedPtrField<google_aws::protobuf::Option>& options,
     StringPiece option_name, int64 default_value);
 
 // Returns double option value. If the option isn't found, returns the
 // default_value.
 PROTOBUF_EXPORT double GetDoubleOptionOrDefault(
-    const RepeatedPtrField<google::protobuf::Option>& options,
+    const RepeatedPtrField<google_aws::protobuf::Option>& options,
     StringPiece option_name, double default_value);
 
 // Returns string option value. If the option isn't found, returns the
 // default_value.
 PROTOBUF_EXPORT std::string GetStringOptionOrDefault(
-    const RepeatedPtrField<google::protobuf::Option>& options,
+    const RepeatedPtrField<google_aws::protobuf::Option>& options,
     StringPiece option_name, StringPiece default_value);
 
 // Returns a boolean value contained in Any type.
 // TODO(skarvaje): Make these utilities dealing with Any types more generic,
 // add more error checking and move to a more public/sharable location so others
 // can use.
-PROTOBUF_EXPORT bool GetBoolFromAny(const google::protobuf::Any& any);
+PROTOBUF_EXPORT bool GetBoolFromAny(const google_aws::protobuf::Any& any);
 
 // Returns int64 value contained in Any type.
-PROTOBUF_EXPORT int64 GetInt64FromAny(const google::protobuf::Any& any);
+PROTOBUF_EXPORT int64 GetInt64FromAny(const google_aws::protobuf::Any& any);
 
 // Returns double value contained in Any type.
-PROTOBUF_EXPORT double GetDoubleFromAny(const google::protobuf::Any& any);
+PROTOBUF_EXPORT double GetDoubleFromAny(const google_aws::protobuf::Any& any);
 
 // Returns string value contained in Any type.
-PROTOBUF_EXPORT std::string GetStringFromAny(const google::protobuf::Any& any);
+PROTOBUF_EXPORT std::string GetStringFromAny(const google_aws::protobuf::Any& any);
 
 // Returns the type string without the url prefix. e.g.: If the passed type is
 // 'type.googleapis.com/tech.type.Bool', the returned value is 'tech.type.Bool'.
@@ -111,40 +111,40 @@ PROTOBUF_EXPORT const std::string GetFullTypeWithUrl(
 
 // Finds and returns option identified by name and option_name within the
 // provided map. Returns nullptr if none found.
-const google::protobuf::Option* FindOptionOrNull(
-    const RepeatedPtrField<google::protobuf::Option>& options,
+const google_aws::protobuf::Option* FindOptionOrNull(
+    const RepeatedPtrField<google_aws::protobuf::Option>& options,
     StringPiece option_name);
 
 // Finds and returns the field identified by field_name in the passed tech Type
 // object. Returns nullptr if none found.
-const google::protobuf::Field* FindFieldInTypeOrNull(
-    const google::protobuf::Type* type, StringPiece field_name);
+const google_aws::protobuf::Field* FindFieldInTypeOrNull(
+    const google_aws::protobuf::Type* type, StringPiece field_name);
 
 // Similar to FindFieldInTypeOrNull, but this looks up fields with given
 // json_name.
-const google::protobuf::Field* FindJsonFieldInTypeOrNull(
-    const google::protobuf::Type* type, StringPiece json_name);
+const google_aws::protobuf::Field* FindJsonFieldInTypeOrNull(
+    const google_aws::protobuf::Type* type, StringPiece json_name);
 
 // Similar to FindFieldInTypeOrNull, but this looks up fields by number.
-const google::protobuf::Field* FindFieldInTypeByNumberOrNull(
-    const google::protobuf::Type* type, int32 number);
+const google_aws::protobuf::Field* FindFieldInTypeByNumberOrNull(
+    const google_aws::protobuf::Type* type, int32 number);
 
 // Finds and returns the EnumValue identified by enum_name in the passed tech
 // Enum object. Returns nullptr if none found.
-const google::protobuf::EnumValue* FindEnumValueByNameOrNull(
-    const google::protobuf::Enum* enum_type, StringPiece enum_name);
+const google_aws::protobuf::EnumValue* FindEnumValueByNameOrNull(
+    const google_aws::protobuf::Enum* enum_type, StringPiece enum_name);
 
 // Finds and returns the EnumValue identified by value in the passed tech
 // Enum object. Returns nullptr if none found.
-const google::protobuf::EnumValue* FindEnumValueByNumberOrNull(
-    const google::protobuf::Enum* enum_type, int32 value);
+const google_aws::protobuf::EnumValue* FindEnumValueByNumberOrNull(
+    const google_aws::protobuf::Enum* enum_type, int32 value);
 
 // Finds and returns the EnumValue identified by enum_name without underscore in
 // the passed tech Enum object. Returns nullptr if none found.
 // For Ex. if enum_name is ACTIONANDADVENTURE it can get accepted if
 // EnumValue's name is action_and_adventure or ACTION_AND_ADVENTURE.
-const google::protobuf::EnumValue* FindEnumValueByNameWithoutUnderscoreOrNull(
-    const google::protobuf::Enum* enum_type, StringPiece enum_name);
+const google_aws::protobuf::EnumValue* FindEnumValueByNameWithoutUnderscoreOrNull(
+    const google_aws::protobuf::Enum* enum_type, StringPiece enum_name);
 
 // Converts input to camel-case and returns it.
 PROTOBUF_EXPORT std::string ToCamelCase(const StringPiece input);
@@ -163,11 +163,11 @@ PROTOBUF_EXPORT bool IsWellKnownType(const std::string& type_name);
 PROTOBUF_EXPORT bool IsValidBoolString(StringPiece bool_string);
 
 // Returns true if "field" is a protobuf map field based on its type.
-PROTOBUF_EXPORT bool IsMap(const google::protobuf::Field& field,
-                           const google::protobuf::Type& type);
+PROTOBUF_EXPORT bool IsMap(const google_aws::protobuf::Field& field,
+                           const google_aws::protobuf::Type& type);
 
 // Returns true if the given type has special MessageSet wire format.
-bool IsMessageSetWireFormat(const google::protobuf::Type& type);
+bool IsMessageSetWireFormat(const google_aws::protobuf::Type& type);
 
 // Infinity/NaN-aware conversion to string.
 PROTOBUF_EXPORT std::string DoubleAsString(double value);

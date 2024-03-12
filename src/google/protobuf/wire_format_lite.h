@@ -67,7 +67,7 @@
 #undef TYPE_BOOL
 
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace internal {
 

@@ -35,7 +35,7 @@
 
 #include <string>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 class DescriptorPool;
 namespace util {

@@ -54,14 +54,14 @@ struct timeval {
 
 #include <google/protobuf/port_def.inc>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace util {
 
 // Utility functions for Timestamp and Duration.
 class PROTOBUF_EXPORT TimeUtil {
-  typedef google::protobuf::Timestamp Timestamp;
-  typedef google::protobuf::Duration Duration;
+  typedef google_aws::protobuf::Timestamp Timestamp;
+  typedef google_aws::protobuf::Duration Duration;
 
  public:
   // The min/max Timestamp/Duration values we support.
@@ -167,7 +167,7 @@ class PROTOBUF_EXPORT TimeUtil {
 }  // namespace protobuf
 }  // namespace google
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 // Overloaded operators for Duration.
 //

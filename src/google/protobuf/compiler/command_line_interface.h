@@ -50,7 +50,7 @@
 #include <google/protobuf/stubs/common.h>
 #include <google/protobuf/port_def.inc>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 
 class Descriptor;           // descriptor.h

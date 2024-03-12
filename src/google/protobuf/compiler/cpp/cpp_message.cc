@@ -59,7 +59,7 @@
 #include <google/protobuf/stubs/hash.h>
 
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 namespace cpp {

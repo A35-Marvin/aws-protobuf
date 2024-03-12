@@ -32,7 +32,7 @@
 
 #include <google/protobuf/compiler/cpp/cpp_helpers.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 namespace cpp {

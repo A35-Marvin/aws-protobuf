@@ -42,7 +42,7 @@
 #include <google/protobuf/stubs/stl_util.h>
 
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 
 namespace {
@@ -553,8 +553,8 @@ class EncodedDescriptorDatabase::DescriptorIndex {
 
 bool EncodedDescriptorDatabase::Add(const void* encoded_file_descriptor,
                                     int size) {
-  google::protobuf::Arena arena;
-  auto* file = google::protobuf::Arena::CreateMessage<FileDescriptorProto>(&arena);
+  google_aws::protobuf::Arena arena;
+  auto* file = google_aws::protobuf::Arena::CreateMessage<FileDescriptorProto>(&arena);
   if (file->ParseFromArray(encoded_file_descriptor, size)) {
     return index_->AddFile(*file,
                            std::make_pair(encoded_file_descriptor, size));

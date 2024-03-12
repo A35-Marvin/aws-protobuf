@@ -38,7 +38,7 @@
 #include <google/protobuf/compiler/csharp/csharp_source_generator_base.h>
 #include <google/protobuf/compiler/csharp/csharp_helpers.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 namespace csharp {

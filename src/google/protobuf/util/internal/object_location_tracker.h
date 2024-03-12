@@ -36,7 +36,7 @@
 #include <google/protobuf/stubs/common.h>
 #include <google/protobuf/util/internal/location_tracker.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace util {
 namespace converter {

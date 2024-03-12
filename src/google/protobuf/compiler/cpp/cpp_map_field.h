@@ -36,7 +36,7 @@
 
 #include <google/protobuf/compiler/cpp/cpp_message_field.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 namespace cpp {

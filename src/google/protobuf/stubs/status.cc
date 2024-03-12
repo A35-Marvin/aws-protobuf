@@ -34,7 +34,7 @@
 #include <string>
 #include <utility>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace util {
 namespace error {

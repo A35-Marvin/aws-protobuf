@@ -30,7 +30,7 @@
 
 #include <google/protobuf/util/internal/error_listener.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace util {
 namespace converter {

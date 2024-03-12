@@ -40,7 +40,7 @@
 
 #include <google/protobuf/compiler/ruby/ruby_generator.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 namespace ruby {

@@ -50,7 +50,7 @@
 #error "You cannot SWIG proto headers"
 #endif
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace internal {
 template <typename Derived, typename Key, typename Value,
@@ -65,7 +65,7 @@ class MapFieldLite;
 }  // namespace protobuf
 }  // namespace google
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace internal {
 
@@ -232,7 +232,7 @@ class MapEntryImpl : public Base {
   std::string GetTypeName() const override { return ""; }
 
   void CheckTypeAndMergeFrom(const MessageLite& other) override {
-    MergeFromInternal(*::google::protobuf::internal::DownCast<const Derived*>(&other));
+    MergeFromInternal(*::google_aws::protobuf::internal::DownCast<const Derived*>(&other));
   }
 
   const char* _InternalParse(const char* ptr, ParseContext* ctx) final {
@@ -271,7 +271,7 @@ class MapEntryImpl : public Base {
     return size;
   }
 
-  ::google::protobuf::uint8* _InternalSerialize(::google::protobuf::uint8* ptr,
+  ::google_aws::protobuf::uint8* _InternalSerialize(::google_aws::protobuf::uint8* ptr,
                               io::EpsCopyOutputStream* stream) const override {
     ptr = KeyTypeHandler::Write(kKeyFieldNumber, key(), ptr, stream);
     return ValueTypeHandler::Write(kValueFieldNumber, value(), ptr, stream);

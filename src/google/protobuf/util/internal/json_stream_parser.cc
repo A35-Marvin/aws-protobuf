@@ -46,7 +46,7 @@
 #include <google/protobuf/util/internal/json_escaping.h>
 
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace util {
 

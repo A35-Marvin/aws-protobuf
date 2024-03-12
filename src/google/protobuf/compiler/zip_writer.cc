@@ -36,7 +36,7 @@
 #include <google/protobuf/compiler/zip_writer.h>
 #include <google/protobuf/io/coded_stream.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 

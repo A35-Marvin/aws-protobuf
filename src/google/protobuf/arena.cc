@@ -45,7 +45,7 @@
 static const size_t kMinCleanupListElements = 8;
 static const size_t kMaxCleanupListElements = 64;  // 1kB on 64-bit.
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace internal {
 

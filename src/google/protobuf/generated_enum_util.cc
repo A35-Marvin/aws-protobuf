@@ -34,7 +34,7 @@
 
 #include <google/protobuf/generated_message_util.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace internal {
 namespace {

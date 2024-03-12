@@ -37,7 +37,7 @@
 #include <google/protobuf/stubs/strutil.h>
 #include <algorithm> // std::find()
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 namespace objectivec {

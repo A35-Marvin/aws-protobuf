@@ -62,7 +62,7 @@
 
 #include <google/protobuf/port_def.inc>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 
 namespace internal {
@@ -178,7 +178,7 @@ class GeneratedMessageFactory : public MessageFactory {
  public:
   static GeneratedMessageFactory* singleton();
 
-  void RegisterFile(const google::protobuf::internal::DescriptorTable* table);
+  void RegisterFile(const google_aws::protobuf::internal::DescriptorTable* table);
   void RegisterType(const Descriptor* descriptor, const Message* prototype);
 
   // implements MessageFactory ---------------------------------------
@@ -186,7 +186,7 @@ class GeneratedMessageFactory : public MessageFactory {
 
  private:
   // Only written at static init time, so does not require locking.
-  HASH_MAP<const char*, const google::protobuf::internal::DescriptorTable*, STR_HASH_FXN,
+  HASH_MAP<const char*, const google_aws::protobuf::internal::DescriptorTable*, STR_HASH_FXN,
            streq>
       file_map_;
 
@@ -202,7 +202,7 @@ GeneratedMessageFactory* GeneratedMessageFactory::singleton() {
 }
 
 void GeneratedMessageFactory::RegisterFile(
-    const google::protobuf::internal::DescriptorTable* table) {
+    const google_aws::protobuf::internal::DescriptorTable* table) {
   if (!InsertIfNotPresent(&file_map_, table->filename, table)) {
     GOOGLE_LOG(FATAL) << "File is already registered: " << table->filename;
   }
@@ -271,7 +271,7 @@ MessageFactory* MessageFactory::generated_factory() {
 }
 
 void MessageFactory::InternalRegisterGeneratedFile(
-    const google::protobuf::internal::DescriptorTable* table) {
+    const google_aws::protobuf::internal::DescriptorTable* table) {
   GeneratedMessageFactory::singleton()->RegisterFile(table);
 }
 

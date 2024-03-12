@@ -35,7 +35,7 @@
 #include <string>
 #include <google/protobuf/compiler/objectivec/objectivec_field.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 namespace objectivec {

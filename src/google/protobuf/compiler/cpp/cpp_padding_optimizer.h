@@ -37,7 +37,7 @@
 
 #include <google/protobuf/compiler/cpp/cpp_message_layout_helper.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 namespace cpp {

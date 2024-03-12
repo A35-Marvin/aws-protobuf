@@ -36,11 +36,11 @@
 
 #include <google/protobuf/port_def.inc>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace util {
 
-using google::protobuf::FieldMask;
+using google_aws::protobuf::FieldMask;
 
 std::string FieldMaskUtil::ToString(const FieldMask& mask) {
   return Join(mask.paths(), ",");

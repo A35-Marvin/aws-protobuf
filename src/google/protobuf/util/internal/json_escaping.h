@@ -34,7 +34,7 @@
 #include <google/protobuf/stubs/common.h>
 #include <google/protobuf/stubs/bytestream.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace util {
 namespace converter {

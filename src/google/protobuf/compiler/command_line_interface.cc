@@ -85,7 +85,7 @@
 
 #include <google/protobuf/port_def.inc>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 
@@ -101,12 +101,12 @@ namespace {
 #if defined(_WIN32)
 // DO NOT include <io.h>, instead create functions in io_win32.{h,cc} and import
 // them like we do below.
-using google::protobuf::io::win32::access;
-using google::protobuf::io::win32::close;
-using google::protobuf::io::win32::mkdir;
-using google::protobuf::io::win32::open;
-using google::protobuf::io::win32::setmode;
-using google::protobuf::io::win32::write;
+using google_aws::protobuf::io::win32::access;
+using google_aws::protobuf::io::win32::close;
+using google_aws::protobuf::io::win32::mkdir;
+using google_aws::protobuf::io::win32::open;
+using google_aws::protobuf::io::win32::setmode;
+using google_aws::protobuf::io::win32::write;
 #endif
 
 static const char* kDefaultDirectDependenciesViolationMsg =
@@ -742,7 +742,7 @@ CommandLineInterface::MemoryOutputStream::~MemoryOutputStream() {
 
       // Now copy in the data.
       std::string::size_type data_pos = 0;
-      char* target_ptr = ::google::protobuf::string_as_array(target) + pos;
+      char* target_ptr = ::google_aws::protobuf::string_as_array(target) + pos;
       while (data_pos < data_.size()) {
         // Copy indent.
         memcpy(target_ptr, indent_.data(), indent_.size());
@@ -759,7 +759,7 @@ CommandLineInterface::MemoryOutputStream::~MemoryOutputStream() {
       }
 
       GOOGLE_CHECK_EQ(target_ptr,
-               ::google::protobuf::string_as_array(target) + pos + data_.size() + indent_size);
+               ::google_aws::protobuf::string_as_array(target) + pos + data_.size() + indent_size);
     }
   }
 }
@@ -1545,12 +1545,12 @@ CommandLineInterface::InterpretArgument(const std::string& name,
 #if defined(_WIN32)
     // On Windows, the shell (typically cmd.exe) does not expand wildcards in
     // file names (e.g. foo\*.proto), so we do it ourselves.
-    switch (google::protobuf::io::win32::ExpandWildcards(
+    switch (google_aws::protobuf::io::win32::ExpandWildcards(
         value,
         [this](const string& path) { this->input_files_.push_back(path); })) {
-      case google::protobuf::io::win32::ExpandWildcardsResult::kSuccess:
+      case google_aws::protobuf::io::win32::ExpandWildcardsResult::kSuccess:
         break;
-      case google::protobuf::io::win32::ExpandWildcardsResult::
+      case google_aws::protobuf::io::win32::ExpandWildcardsResult::
           kErrorNoMatchingFile:
         // Path does not exist, is not a file, or it's longer than MAX_PATH and
         // long path handling is disabled.
@@ -2189,7 +2189,7 @@ bool CommandLineInterface::GeneratePluginOutput(
                               &already_seen, request.mutable_proto_file());
   }
 
-  google::protobuf::compiler::Version* version =
+  google_aws::protobuf::compiler::Version* version =
       request.mutable_compiler_version();
   version->set_major(PROTOBUF_VERSION / 1000000);
   version->set_minor(PROTOBUF_VERSION / 1000 % 1000);

@@ -56,15 +56,15 @@
 #include <ctype.h>
 #endif
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 
 #ifdef _WIN32
 // DO NOT include <io.h>, instead create functions in io_win32.{h,cc} and import
 // them like we do below.
-using google::protobuf::io::win32::access;
-using google::protobuf::io::win32::open;
+using google_aws::protobuf::io::win32::access;
+using google_aws::protobuf::io::win32::open;
 #endif
 
 // Returns true if the text looks like a Windows-style absolute path, starting

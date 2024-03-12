@@ -40,7 +40,7 @@
 
 #include <google/protobuf/stubs/common.h>
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 class FieldDescriptor;  // descriptor.h
 namespace compiler {
@@ -55,7 +55,7 @@ class Printer;  // printer.h
 }  // namespace protobuf
 }  // namespace google
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace compiler {
 namespace java {

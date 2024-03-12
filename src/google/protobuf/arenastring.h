@@ -56,7 +56,7 @@
 // implementation that knew more about ::std::string's internals could integrate
 // more closely with the arena allocator.
 
-namespace google {
+namespace google_aws {
 namespace protobuf {
 namespace internal {
 
